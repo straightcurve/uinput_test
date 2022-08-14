@@ -20,7 +20,6 @@ Scope<VirtualDevice> VirtualDevice::make(const std::function<void(VirtualDevice*
     }
 
     return vd;
-
 }
 
 void VirtualDevice::enable_sticks(const std::vector<int> &sticks) {
@@ -67,7 +66,7 @@ Scope<VirtualDevice> VirtualDevice::make_ps5_gamepad() {
         struct uinput_user_dev device;
         std::memset(&device, 0, sizeof(device));
 
-        std::snprintf(device.name, UINPUT_MAX_NAME_SIZE, "PS5 Virtual Gamepad");
+        std::snprintf(device.name, UINPUT_MAX_NAME_SIZE, "Sony Interactive Entertainment Wireless Controller");
         device.id.bustype = BUS_USB;
         device.id.vendor  = 0x54c;
         device.id.product = 0xce6;
