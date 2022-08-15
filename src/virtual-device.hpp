@@ -4,10 +4,10 @@
 class VirtualDevice {
 private:
 
-    explicit VirtualDevice(__sig_atomic_t fd): fd(fd) {}
+    explicit VirtualDevice(int fd): fd(fd) {}
 
 public:
-    __sig_atomic_t fd;
+    int fd;
     VirtualDevice(): VirtualDevice(0) {}
 
     virtual ~VirtualDevice() {
